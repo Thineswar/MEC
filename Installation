@@ -10,8 +10,7 @@ $DriveLetter = (Read-Host "Drive with installation files?").ToUpper()
 
 #Testing path before proceeding
 if (!(Test-Path "${DriveLetter}:\Unzipped")){
-    Write-Host "Test-Path has failed" 
-    Write-Host Test-Path "${DriveLetter}:\Unzipped"
+    Write-Host "Test-Path has failed: ${DriveLetter}:\Unzipped"
     Read-Host "Enter to exit"
     Exit 0
     } 
