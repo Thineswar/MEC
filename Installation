@@ -2,9 +2,17 @@
 # Write-Host "Disabling Windows Defender"
 # Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -EnableControlledFolderAccess Disabled -EnableNetworkProtection AuditMode -Force -MAPSReporting Disabled -SubmitSamplesConsent NeverSend
 
-#Determining Drive Letter with installation files
+#Determining drive letter with installation files
 Get-PSDrive D
-$DriveLetter = Read-Host "Drive with installation files?"
+$DriveLetter = (Read-Host "Drive with installation files?").ToUpper()
+
+#Testing path before proceeding
+if (!(Test-Path "${DriveLetter}:\Unzipped")){
+    Write-Host "Test-Path has failed" 
+    Write-Host Test-Path "${DriveLetter}:\Unzipped"
+    Read-Host "Enter to exit"
+    Exit 0
+    } 
 
 # Copying files over
 robocopy.exe "${DriveLetter}:\Unzipped" 'C:\Unzipped' /e /z /j /mt:16 /nodcopy /nooffload /ndl
