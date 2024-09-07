@@ -1,0 +1,14 @@
+# Define the URL of the XML file
+$url = "https://raw.githubusercontent.com/Thineswar/MEC/main/Unattended.xml"
+
+# Define the destination path
+$destinationPath = "C:\Windows\Panther\Unattended.xml"
+
+# Download the XML file and save it to the destination path
+try {
+    Invoke-WebRequest -Uri $url -OutFile $destinationPath
+    Write-Output "File downloaded successfully to $destinationPath"
+}
+catch {
+    Write-Error "Failed to download the file. $_"
+}
