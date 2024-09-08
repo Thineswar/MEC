@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-GB&Locale=en-MY&Keyboard=00000409&GeoLocation=167&ProcessorArchitecture=amd64&ComputerNameMode=Random&TimeZoneMode=Explicit&TimeZone=Singapore+Standard+Time&PartitionMode=Interactive&WindowsEditionMode=Unattended&WindowsEdition=home&UserAccountMode=Unattended&AccountName0=MEC&AccountPassword0=password&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&DisableDefender=true&AllowPowerShellScripts=true&NoAutoRebootWithLoggedOnUsers=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&WifiMode=Unattended&WifiName=mecssdhbhd&WifiAuthentication=WPA3SAE&WifiPassword=05305933&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveInternetExplorer=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveZuneVideo=true&RemoveNews=true&RemoveNotepad=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemovePowerAutomate=true&RemovePowerShellISE=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&UserOnceScript0=%23+Turning+off+Windows+Defender%0D%0AWrite-Host+%22Disabling+Windows+Defender%22%0D%0ASet-MpPreference+-DisableIntrusionPreventionSystem+%24true+-DisableIOAVProtection+%24true+-DisableRealtimeMonitoring+%24true+-DisableScriptScanning+%24true+-EnableControlledFolderAccess+Disabled+-EnableNetworkProtection+AuditMode+-Force+-MAPSReporting+Disabled+-SubmitSamplesConsent+NeverSend%0D%0A%0D%0A%23+Copying+files+over%0D%0Arobocopy.exe+%27D%3A%5CUnzipped%27+%27%24%28Get-Location%29%5CUnzipped%27+%2Fe+%2Fz+%2Fj+%2Fmt%3A16+%2Fnodcopy+%2Fnooffload+%2Fndl%0D%0A%0D%0A%23+1.3+ArcGIS+10.8%0D%0A%23+1.3.1+Installation%0D%0AWrite-Host+%22ArcGIS+10.8%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CESRI+ArcGIS+Desktop+10.8%5CESRI+ArcGIS+Desktop+10.8%5CArcGIS_Desktop_108_172737.exe%27+%22%2FS%22+-Wait%0D%0AStart-Process+%24env%3AUSERPROFILE%27%5CDocuments%5CArcGIS+10.8%5CDesktop%5CSetup.exe%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+1.3.1+Moving+crack+files+for+10.8%0D%0AWrite-Host+%22ArcGIS+10.8%3A+Copying+crack+files+over%22%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CESRI+ArcGIS+Desktop+10.8%5CESRI+ArcGIS+Desktop+10.8%5CCrack%5CAfCore.dll%27+%27%24%28Get-Location%29%5CProgram+Files+%28x86%29%5CArcGIS%5CDesktop10.8%5Cbin%27%0D%0A%0D%0A%23+2.+Agisoft%0D%0A%23+2.1+Installation%0D%0AWrite-Host+%22Agisoft%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CAgisoft+Metashape+Professional+1.8.4+Build+14493+%28x64%29+Multilingual%5Cmetashape-pro_1_8_4_x64.msi%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+2.2+Cracking%0D%0AWrite-Host+%22Agisoft%3A+Cracking%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CAgisoft+Metashape+Professional+1.8.4+Build+14493+%28x64%29+Multilingual%5Ccrack%5CPatch.exe%27+%22%2FS%22+-Wait%0D%0A%0D%0A%23+3.+Global+Mapper%0D%0A%23+3.1+Installation%0D%0AWrite-Host+%22Global+Mapper%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%5BCrackingPatching%5D%5Cglobal-mapper-22_1-x64.exe%27+%22%2FS%22+-Wait%0D%0A%23+3.2+Copying+crack+files%0D%0AWrite-Host+%22Global+Mapper%3A+Copying+crack+files%22%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%60%5BCrackingPatching%60%5D%5Cpatch%5Cx64%5Cglobal_mapper.exe%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CGlobalMapper22.1_64bit%5C%27+-Force%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%60%5BCrackingPatching%60%5D%5Cpatch%5Cx64%5CProgramData%5CGlobalMapper%5C%27+-Destination+%27%24%28Get-Location%29%5CProgramData%5C%27+-Recurse%0D%0A%0D%0A%23+4.+Adobe+Acrobat+Pro%0D%0A%23+4.1+Installation%0D%0AWrite-Host+%22Adobe+Acrobat+Pro%3A+Starting+Installation%22%0D%0A%24mountResult+%3D+Mount-DiskImage+%27%24%28Get-Location%29%5CUnzipped%5CAdobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso%27%0D%0A%24driveLetter+%3D+%28%24mountResult+%7C+Get-Volume%29.DriveLetter%0D%0AStart-Process+%22%24%28%24driveLetter%29%3AAdobe+Acrobat+Pro%5Csetup.exe%22+%22%2FsPB+%2Frps%22+-Wait%0D%0A%23+4.2+Cracking%0D%0AWrite-Host+%22Adobe+Acrobat+Pro%3A+Cracking%22%0D%0AStart-Process+%22%24%28%24driveLetter%29%3AAdobe+Acrobat+Pro%5Ccrack.exe%22+%22%2FS%22+-Wait%0D%0A%23+4.3+Disabling+Adobe%27s+Auto+Update+Service%0D%0AStop-Service+%27AdobeARMservice%27%0D%0A%23+4.4+Dismounting+ISO+file%0D%0ADismount-DiskImage+%27%24%28Get-Location%29%5CUnzipped%5CAdobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso%27%0D%0A%0D%0A%23+5+Nitro+v14.5.0.11%0D%0A%23+5.1+Installation%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CNitro+Pro+14.5.0.11+%28x64%29+Enterprise+%2B+Crack%5CSetup%5Cnitro_pro14_x64.msi%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+5.2+Copying+crack+files%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CNitro+Pro+14.5.0.11+%28x64%29+Enterprise+%2B+Crack%5CCrack%5CNitroPDF.exe%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CNitro%5CPDF+Pro%5C14%27+-Force%0D%0A%0D%0A%23+6+Envi+5.6%0D%0A%23+6.1+Installation%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5Cenvi56-win.exe%27+%22%2FSilent%22+-Wait%0D%0A%23+6.2+Moving+crack+files%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5CCrack+5.6%5Cx86bit%5C*%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CHarris%5CENVI56%5CIDL88%5Cbin%5Cbin.x86%5C%27+-Force%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5CCrack+5.6%5Cx64bit%5C*%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CHarris%5CENVI56%5CIDL88%5Cbin%5Cbin.x86_64%5C%27+-Force%0D%0A%0D%0A%23+Installing+other+programs+via+winget%0D%0A%24listOfPrograms+%3D+%22Bitdefender.Bitdefender%22%2C+%22Google.Chrome%22%2C+%22Mozilla.Firefox%22%2C+%22mcmilk.7zip-zstd%22%2C+%22RustDesk.RustDesk%22%2C+%22Google.EarthPro%22%2C+%22Zoom.Zoom%22%2C+%22Adobe.Acrobat.Reader.64-bit%22%0D%0Aforeach+%28%24program+in+%24listOfPrograms%29+%7B+winget+install+-h+-e+%2D%2Did+%24program+%7D&UserOnceScriptType0=Ps1&WdacMode=Skip-->
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-GB&Locale=en-MY&Keyboard=00000409&GeoLocation=167&ProcessorArchitecture=amd64&ComputerNameMode=Random&TimeZoneMode=Explicit&TimeZone=Singapore+Standard+Time&PartitionMode=Interactive&WindowsEditionMode=Unattended&WindowsEdition=home&UserAccountMode=Unattended&AccountName0=MEC&AccountPassword0=password&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&DisableDefender=true&AllowPowerShellScripts=true&NoAutoRebootWithLoggedOnUsers=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&WifiMode=Unattended&WifiName=mecssdhbhd&WifiAuthentication=WPA3SAE&WifiPassword=05305933&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveInternetExplorer=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveZuneVideo=true&RemoveNews=true&RemoveNotepad=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemovePowerAutomate=true&RemovePowerShellISE=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&WdacMode=Skip-->
 	<settings pass="offlineServicing"></settings>
 	<settings pass="windowsPE">
 		<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
@@ -19,6 +19,144 @@
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
 			</UserData>
+			<RunSynchronous>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo Set fso = CreateObject( "Scripting.FileSystemObject" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>2</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo Set dic = CreateObject( "Scripting.Dictionary" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>3</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo initialized = false"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>4</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo Do"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>5</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo     For Each drive In fso.Drives"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>6</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo         If drive.IsReady Then"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>7</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo             If drive.DriveLetter ^&lt;^&gt; "X" Then"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>8</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                 For Each folder In Array( "$Windows.~BT\NewOS\Windows", "Windows" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>9</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                     file = fso.BuildPath( fso.BuildPath( drive.RootFolder, folder ), "System32\config\SYSTEM" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>10</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                     If fso.FileExists( file ) And fso.FileExists( file + ".LOG1" ) And fso.FileExists( file + ".LOG2" ) Then"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>11</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                         If Not initialized Then"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>12</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             dic.Add file, Nothing"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>13</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                         ElseIf Not dic.Exists( file ) Then"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>14</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             Set shell = CreateObject( "WScript.Shell" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>15</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             ret = 1"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>16</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             Do"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>17</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                                 WScript.Sleep 500"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>18</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                                 ret = shell.Run( "reg.exe LOAD HKLM\mount " + file, 0, True )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>19</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             Loop While ret ^&gt; 0"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>20</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             For Each service In Array( "Sense", "WdBoot", "WdFilter", "WdNisDrv", "WdNisSvc", "WinDefend" )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>21</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                                 ret = shell.Run( "reg.exe ADD HKLM\mount\ControlSet001\Services\" + service + " /v Start /t REG_DWORD /d 4 /f", 0, True )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>22</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             Next"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>23</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             ret = shell.Run( "reg.exe UNLOAD HKLM\mount", 0, True )"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>24</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                             Exit Do"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>25</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                         End If"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>26</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                     End If"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>27</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo                 Next"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>28</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo             End If"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>29</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo         End If"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>30</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo     Next"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>31</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo     initialized = true"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>32</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo     WScript.Sleep 1000"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>33</Order>
+					<Path>cmd.exe /c "&gt;&gt;"X:\disable-defender.vbs" echo Loop"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>34</Order>
+					<Path>cmd.exe /c "start /MIN cscript.exe //E:vbscript X:\disable-defender.vbs"</Path>
+				</RunSynchronousCommand>
+			</RunSynchronous>
 		</component>
 	</settings>
 	<settings pass="generalize"></settings>
@@ -111,107 +249,91 @@
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
 					<Order>22</Order>
-					<Path>regini.exe "%TEMP%\disable-defender.ini"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>23</Order>
 					<Path>powershell.exe -NoProfile -Command "Set-ExecutionPolicy -Scope 'LocalMachine' -ExecutionPolicy 'RemoteSigned' -Force;"</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>24</Order>
+					<Order>23</Order>
 					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v AUOptions /t REG_DWORD /d 4 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>25</Order>
+					<Order>24</Order>
 					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoRebootWithLoggedOnUsers /t REG_DWORD /d 1 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>26</Order>
+					<Order>25</Order>
 					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>27</Order>
+					<Order>26</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "ContentDeliveryAllowed" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>28</Order>
+					<Order>27</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "FeatureManagementEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>29</Order>
+					<Order>28</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "OEMPreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>30</Order>
+					<Order>29</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>31</Order>
+					<Order>30</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEverEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>32</Order>
+					<Order>31</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>33</Order>
+					<Order>32</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SoftLandingEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>34</Order>
+					<Order>33</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContentEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>35</Order>
+					<Order>34</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-310093Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>36</Order>
+					<Order>35</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338387Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>37</Order>
+					<Order>36</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338388Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>38</Order>
+					<Order>37</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>39</Order>
+					<Order>38</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338393Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>40</Order>
+					<Order>39</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>41</Order>
+					<Order>40</Order>
 					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>42</Order>
+					<Order>41</Order>
 					<Path>reg.exe unload "HKU\DefaultUser"</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>43</Order>
+					<Order>42</Order>
 					<Path>reg.exe add "HKLM\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d 0 /f</Path>
 				</RunSynchronousCommand>
 				<RunSynchronousCommand wcm:action="add">
-					<Order>44</Order>
+					<Order>43</Order>
 					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d 1 /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>45</Order>
-					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>46</Order>
-					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v "unattend-01" /t REG_SZ /d "powershell.exe -NoProfile -Command \"Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\unattend-01.ps1' -Raw | Invoke-Expression;\"" /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>47</Order>
-					<Path>reg.exe unload "HKU\DefaultUser"</Path>
 				</RunSynchronousCommand>
 			</RunSynchronous>
 		</component>
@@ -441,19 +563,5 @@ $logfile = 'C:\Windows\Temp\remove-caps.log';
 	</MSM>
 </WLANProfile>
 		]]></File>
-		<File path="%TEMP%\disable-defender.ini">
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense
-    "Start" = REG_DWORD 4
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdBoot
-    "Start" = REG_DWORD 4
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter
-    "Start" = REG_DWORD 4
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisDrv
-    "Start" = REG_DWORD 4
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc
-    "Start" = REG_DWORD 4
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend
-    "Start" = REG_DWORD 4
-		</File>
 	</Extensions>
 </unattend>
