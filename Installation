@@ -13,7 +13,7 @@ if (!(Test-Path "${DriveLetter}:\Unzipped")){
     Write-Host "Test-Path has failed: ${DriveLetter}:\Unzipped"
     Read-Host "Enter to exit"
     Exit 0
-    } 
+} 
 
 # Copying files over
 robocopy.exe "${DriveLetter}:\Unzipped" 'C:\Unzipped' /e /z /j /mt:16 /nodcopy /nooffload /ndl
@@ -70,6 +70,24 @@ Start-Process 'C:\Unzipped\Envi 5.6\envi56-win.exe' "/Silent" -Wait
 # 6.2 Moving crack files
 Copy-Item -Path 'C:\Unzipped\Envi 5.6\Crack 5.6\x86bit\*' -Destination 'C:\Program Files\Harris\ENVI56\IDL88\bin\bin.x86\' -Force
 Copy-Item -Path 'C:\Unzipped\Envi 5.6\Crack 5.6\x64bit\*' -Destination 'C:\Program Files\Harris\ENVI56\IDL88\bin\bin.x86_64\' -Force
+
+try {
+    $version = winget --version
+} catch {
+    Write-Output "winget --version failed"
+}
+
+if ($version -eq $null) {
+    Write-Output "Winget is not installed. Installing Winget..."
+    Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "$env:TEMP\AppInstaller.appxbundle"
+    Start-Process -FilePath "$env:TEMP\AppInstaller.appxbundle" -Wait
+    Write-Output "Winget installation completed."
+} else {
+    Write-Output "Current Winget version: $version"
+    Write-Output "Updating App Installer..."
+    Start-Process "ms-windows-store://pdp/?productid=9NBLGGH42THS" -Wait
+    Write-Output "App Installer update initiated."
+}
 
 # Installing other programs via winget
 $listOfPrograms = "Bitdefender.Bitdefender", "Google.Chrome", "Mozilla.Firefox", "mcmilk.7zip-zstd", "RustDesk.RustDesk", "Google.EarthPro", "Zoom.Zoom"
