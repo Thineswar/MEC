@@ -1,5 +1,5 @@
 # Define the URL of the XML file
-$url = "https://raw.githubusercontent.com/Thineswar/MEC/main/Unattended.xml"
+$url = "https://raw.githubusercontent.com/Thineswar/MEC/main/unattend.xml"
 
 # Define the destination path
 $destinationPath = "C:\Windows\Panther\Unattended.xml"
