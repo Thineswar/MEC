@@ -562,6 +562,6 @@ $logfile = 'C:\Windows\Temp\remove-caps.log';
 		</security>
 	</MSM>
 </WLANProfile>
-		]]></File>
+		</File>
 	</Extensions>
 </unattend>
