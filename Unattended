@@ -2,7 +2,7 @@
 $url = "https://raw.githubusercontent.com/Thineswar/MEC/main/unattend.xml"
 
 # Define the destination path
-$destinationPath = "C:\Windows\Panther\Unattended.xml"
+$destinationPath = "C:\Windows\Panther\unattend.xml"
 
 # Download the XML file and save it to the destination path
 try {
