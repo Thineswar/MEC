@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-GB&Locale=en-MY&Keyboard=00000409&GeoLocation=167&ProcessorArchitecture=amd64&ComputerNameMode=Random&TimeZoneMode=Explicit&TimeZone=Singapore+Standard+Time&PartitionMode=Interactive&WindowsEditionMode=Unattended&WindowsEdition=home&UserAccountMode=Unattended&AccountName0=MEC&AccountPassword0=password&AccountGroup0=Administrators&AccountName1=&AccountName2=&AccountName3=&AccountName4=&AutoLogonMode=Own&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&DisableDefender=true&AllowPowerShellScripts=true&NoAutoRebootWithLoggedOnUsers=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&WifiMode=Unattended&WifiName=mecssdhbhd&WifiAuthentication=WPA3SAE&WifiPassword=05305933&ExpressSettings=DisableAll&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveInternetExplorer=true&RemoveMailCalendar=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveZuneVideo=true&RemoveNews=true&RemoveNotepad=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemovePowerAutomate=true&RemovePowerShellISE=true&RemoveQuickAssist=true&RemoveSkype=true&RemoveSolitaire=true&RemoveStepsRecorder=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWeather=true&RemoveWindowsMediaPlayer=true&RemoveZuneMusic=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&UserOnceScript0=%23+Turning+off+Windows+Defender%0D%0AWrite-Host+%22Disabling+Windows+Defender%22%0D%0ASet-MpPreference+-DisableIntrusionPreventionSystem+%24true+-DisableIOAVProtection+%24true+-DisableRealtimeMonitoring+%24true+-DisableScriptScanning+%24true+-EnableControlledFolderAccess+Disabled+-EnableNetworkProtection+AuditMode+-Force+-MAPSReporting+Disabled+-SubmitSamplesConsent+NeverSend%0D%0A%0D%0A%23+Copying+files+over%0D%0Arobocopy.exe+%27D%3A%5CUnzipped%27+%27%24%28Get-Location%29%5CUnzipped%27+%2Fe+%2Fz+%2Fj+%2Fmt%3A16+%2Fnodcopy+%2Fnooffload+%2Fndl%0D%0A%0D%0A%23+1.3+ArcGIS+10.8%0D%0A%23+1.3.1+Installation%0D%0AWrite-Host+%22ArcGIS+10.8%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CESRI+ArcGIS+Desktop+10.8%5CESRI+ArcGIS+Desktop+10.8%5CArcGIS_Desktop_108_172737.exe%27+%22%2FS%22+-Wait%0D%0AStart-Process+%24env%3AUSERPROFILE%27%5CDocuments%5CArcGIS+10.8%5CDesktop%5CSetup.exe%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+1.3.1+Moving+crack+files+for+10.8%0D%0AWrite-Host+%22ArcGIS+10.8%3A+Copying+crack+files+over%22%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CESRI+ArcGIS+Desktop+10.8%5CESRI+ArcGIS+Desktop+10.8%5CCrack%5CAfCore.dll%27+%27%24%28Get-Location%29%5CProgram+Files+%28x86%29%5CArcGIS%5CDesktop10.8%5Cbin%27%0D%0A%0D%0A%23+2.+Agisoft%0D%0A%23+2.1+Installation%0D%0AWrite-Host+%22Agisoft%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CAgisoft+Metashape+Professional+1.8.4+Build+14493+%28x64%29+Multilingual%5Cmetashape-pro_1_8_4_x64.msi%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+2.2+Cracking%0D%0AWrite-Host+%22Agisoft%3A+Cracking%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CAgisoft+Metashape+Professional+1.8.4+Build+14493+%28x64%29+Multilingual%5Ccrack%5CPatch.exe%27+%22%2FS%22+-Wait%0D%0A%0D%0A%23+3.+Global+Mapper%0D%0A%23+3.1+Installation%0D%0AWrite-Host+%22Global+Mapper%3A+Starting+Installation%22%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%5BCrackingPatching%5D%5Cglobal-mapper-22_1-x64.exe%27+%22%2FS%22+-Wait%0D%0A%23+3.2+Copying+crack+files%0D%0AWrite-Host+%22Global+Mapper%3A+Copying+crack+files%22%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%60%5BCrackingPatching%60%5D%5Cpatch%5Cx64%5Cglobal_mapper.exe%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CGlobalMapper22.1_64bit%5C%27+-Force%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CGlobal+Mapper+22.1.0+Build+021721+incl+patch+%60%5BCrackingPatching%60%5D%5Cpatch%5Cx64%5CProgramData%5CGlobalMapper%5C%27+-Destination+%27%24%28Get-Location%29%5CProgramData%5C%27+-Recurse%0D%0A%0D%0A%23+4.+Adobe+Acrobat+Pro%0D%0A%23+4.1+Installation%0D%0AWrite-Host+%22Adobe+Acrobat+Pro%3A+Starting+Installation%22%0D%0A%24mountResult+%3D+Mount-DiskImage+%27%24%28Get-Location%29%5CUnzipped%5CAdobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso%27%0D%0A%24driveLetter+%3D+%28%24mountResult+%7C+Get-Volume%29.DriveLetter%0D%0AStart-Process+%22%24%28%24driveLetter%29%3AAdobe+Acrobat+Pro%5Csetup.exe%22+%22%2FsPB+%2Frps%22+-Wait%0D%0A%23+4.2+Cracking%0D%0AWrite-Host+%22Adobe+Acrobat+Pro%3A+Cracking%22%0D%0AStart-Process+%22%24%28%24driveLetter%29%3AAdobe+Acrobat+Pro%5Ccrack.exe%22+%22%2FS%22+-Wait%0D%0A%23+4.3+Disabling+Adobe%27s+Auto+Update+Service%0D%0AStop-Service+%27AdobeARMservice%27%0D%0A%23+4.4+Dismounting+ISO+file%0D%0ADismount-DiskImage+%27%24%28Get-Location%29%5CUnzipped%5CAdobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso%27%0D%0A%0D%0A%23+5+Nitro+v14.5.0.11%0D%0A%23+5.1+Installation%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CNitro+Pro+14.5.0.11+%28x64%29+Enterprise+%2B+Crack%5CSetup%5Cnitro_pro14_x64.msi%27+%22%2Fpassive+%2Fnorestart%22+-Wait%0D%0A%23+5.2+Copying+crack+files%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CNitro+Pro+14.5.0.11+%28x64%29+Enterprise+%2B+Crack%5CCrack%5CNitroPDF.exe%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CNitro%5CPDF+Pro%5C14%27+-Force%0D%0A%0D%0A%23+6+Envi+5.6%0D%0A%23+6.1+Installation%0D%0AStart-Process+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5Cenvi56-win.exe%27+%22%2FSilent%22+-Wait%0D%0A%23+6.2+Moving+crack+files%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5CCrack+5.6%5Cx86bit%5C*%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CHarris%5CENVI56%5CIDL88%5Cbin%5Cbin.x86%5C%27+-Force%0D%0ACopy-Item+-Path+%27%24%28Get-Location%29%5CUnzipped%5CEnvi+5.6%5CCrack+5.6%5Cx64bit%5C*%27+-Destination+%27%24%28Get-Location%29%5CProgram+Files%5CHarris%5CENVI56%5CIDL88%5Cbin%5Cbin.x86_64%5C%27+-Force%0D%0A%0D%0A%23+Installing+other+programs+via+winget%0D%0A%24listOfPrograms+%3D+%22Bitdefender.Bitdefender%22%2C+%22Google.Chrome%22%2C+%22Mozilla.Firefox%22%2C+%22mcmilk.7zip-zstd%22%2C+%22RustDesk.RustDesk%22%2C+%22Google.EarthPro%22%2C+%22Zoom.Zoom%22%2C+%22Adobe.Acrobat.Reader.64-bit%22%0D%0Aforeach+%28%24program+in+%24listOfPrograms%29+%7B+winget+install+-h+-e+%2D%2Did+%24program+%7D&UserOnceScriptType0=Ps1&WdacMode=Skip-->
+	<settings pass="offlineServicing"></settings>
+	<settings pass="windowsPE">
+		<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<SetupUILanguage>
+				<UILanguage>en-GB</UILanguage>
+			</SetupUILanguage>
+			<InputLocale>4409:00000409</InputLocale>
+			<SystemLocale>en-MY</SystemLocale>
+			<UILanguage>en-GB</UILanguage>
+			<UserLocale>en-MY</UserLocale>
+		</component>
+		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<UserData>
+				<ProductKey>
+					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key>
+				</ProductKey>
+				<AcceptEula>true</AcceptEula>
+			</UserData>
+		</component>
+	</settings>
+	<settings pass="generalize"></settings>
+	<settings pass="specialize">
+		<component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<RunSynchronous>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>2</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v "UninstallCopilot" /t REG_SZ /d "powershell.exe -NoProfile -Command \"Get-AppxPackage -Name 'Microsoft.Windows.Ai.Copilot.Provider' | Remove-AppxPackage;\"" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>3</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Policies\Microsoft\Windows\WindowsCopilot" /v TurnOffWindowsCopilot /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>4</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>5</Order>
+					<Path>reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\DevHomeUpdate" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>6</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>7</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Notepad" /v ShowStoreBanner /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>8</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>9</Order>
+					<Path>reg.exe delete "HKLM\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\OutlookUpdate" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>10</Order>
+					<Path>powershell.exe -NoProfile -Command "$xml = [xml]::new(); $xml.Load('C:\Windows\Panther\unattend.xml'); $sb = [scriptblock]::Create( $xml.unattend.Extensions.ExtractScript ); Invoke-Command -ScriptBlock $sb -ArgumentList $xml;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>11</Order>
+					<Path>powershell.exe -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Temp\remove-packages.ps1' -Raw | Invoke-Expression;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>12</Order>
+					<Path>powershell.exe -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Temp\remove-caps.ps1' -Raw | Invoke-Expression;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>13</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins /t REG_SZ /d "{ \"pinnedList\": [] }" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>14</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins_ProviderSet /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>15</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins_WinningProvider /t REG_SZ /d B5292708-1619-419B-9923-E5D9F3925E71 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>16</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\providers\B5292708-1619-419B-9923-E5D9F3925E71\default\Device\Start" /v ConfigureStartPins /t REG_SZ /d "{ \"pinnedList\": [] }" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>17</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\providers\B5292708-1619-419B-9923-E5D9F3925E71\default\Device\Start" /v ConfigureStartPins_LastWrite /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>18</Order>
+					<Path>cmd.exe /c "netsh.exe wlan add profile filename="%TEMP%\wifi.xml" user=all &gt;&gt;"%TEMP%\wifi.log" 2&gt;&amp;1"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>19</Order>
+					<Path>cmd.exe /c "del "%TEMP%\wifi.xml""</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>20</Order>
+					<Path>cmd.exe /c "netsh.exe wlan connect name="mecssdhbhd" ssid="mecssdhbhd" &gt;&gt;"%TEMP%\wifi.log" 2&gt;&amp;1"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>21</Order>
+					<Path>net.exe accounts /maxpwage:UNLIMITED</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>22</Order>
+					<Path>regini.exe "%TEMP%\disable-defender.ini"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>23</Order>
+					<Path>powershell.exe -NoProfile -Command "Set-ExecutionPolicy -Scope 'LocalMachine' -ExecutionPolicy 'RemoteSigned' -Force;"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>24</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v AUOptions /t REG_DWORD /d 4 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>25</Order>
+					<Path>reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoRebootWithLoggedOnUsers /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>26</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>27</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "ContentDeliveryAllowed" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>28</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "FeatureManagementEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>29</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "OEMPreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>30</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>31</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEverEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>32</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>33</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SoftLandingEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>34</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContentEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>35</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-310093Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>36</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338387Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>37</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338388Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>38</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>39</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338393Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>40</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>41</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>42</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>43</Order>
+					<Path>reg.exe add "HKLM\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d 0 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>44</Order>
+					<Path>reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\BitLocker" /v "PreventDeviceEncryption" /t REG_DWORD /d 1 /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>45</Order>
+					<Path>reg.exe load "HKU\DefaultUser" "C:\Users\Default\NTUSER.DAT"</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>46</Order>
+					<Path>reg.exe add "HKU\DefaultUser\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v "unattend-01" /t REG_SZ /d "powershell.exe -NoProfile -Command \"Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\unattend-01.ps1' -Raw | Invoke-Expression;\"" /f</Path>
+				</RunSynchronousCommand>
+				<RunSynchronousCommand wcm:action="add">
+					<Order>47</Order>
+					<Path>reg.exe unload "HKU\DefaultUser"</Path>
+				</RunSynchronousCommand>
+			</RunSynchronous>
+		</component>
+		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<TimeZone>Singapore Standard Time</TimeZone>
+		</component>
+	</settings>
+	<settings pass="auditSystem"></settings>
+	<settings pass="auditUser"></settings>
+	<settings pass="oobeSystem">
+		<component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<InputLocale>4409:00000409</InputLocale>
+			<SystemLocale>en-MY</SystemLocale>
+			<UILanguage>en-GB</UILanguage>
+			<UserLocale>en-MY</UserLocale>
+		</component>
+		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<UserAccounts>
+				<LocalAccounts>
+					<LocalAccount wcm:action="add">
+						<Name>MEC</Name>
+						<Group>Administrators</Group>
+						<Password>
+							<Value>password</Value>
+							<PlainText>true</PlainText>
+						</Password>
+					</LocalAccount>
+				</LocalAccounts>
+			</UserAccounts>
+			<AutoLogon>
+				<Username>MEC</Username>
+				<Enabled>true</Enabled>
+				<LogonCount>1</LogonCount>
+				<Password>
+					<Value>password</Value>
+					<PlainText>true</PlainText>
+				</Password>
+			</AutoLogon>
+			<OOBE>
+				<ProtectYourPC>3</ProtectYourPC>
+				<HideEULAPage>true</HideEULAPage>
+			</OOBE>
+			<FirstLogonCommands>
+				<SynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<CommandLine>reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoLogonCount /t REG_DWORD /d 0 /f</CommandLine>
+				</SynchronousCommand>
+			</FirstLogonCommands>
+		</component>
+	</settings>
+	<Extensions xmlns="https://schneegans.de/windows/unattend-generator/">
+		<ExtractScript>
+param(
+    [xml] $Document
+);
+
+$scriptsDir = 'C:\Windows\Setup\Scripts\';
+foreach( $file in $Document.unattend.Extensions.File ) {
+    $path = [System.Environment]::ExpandEnvironmentVariables(
+        $file.GetAttribute( 'path' )
+    );
+    if( $path.StartsWith( $scriptsDir ) ) {
+        mkdir -Path $scriptsDir -ErrorAction 'SilentlyContinue';
+    }
+    $encoding = switch( [System.IO.Path]::GetExtension( $path ) ) {
+        { $_ -in '.ps1', '.xml' } { [System.Text.Encoding]::UTF8; }
+        { $_ -in '.reg', '.vbs', '.js' } { [System.Text.UnicodeEncoding]::new( $false, $true ); }
+        default { [System.Text.Encoding]::Default; }
+    };
+    [System.IO.File]::WriteAllBytes( $path, ( $encoding.GetPreamble() + $encoding.GetBytes( $file.InnerText.Trim() ) ) );
+}
+		</ExtractScript>
+		<File path="C:\Windows\Temp\remove-packages.ps1">
+$selectors = @(
+	'Microsoft.Microsoft3DViewer';
+	'Microsoft.BingSearch';
+	'Clipchamp.Clipchamp';
+	'Microsoft.549981C3F5F10';
+	'Microsoft.Windows.DevHome';
+	'MicrosoftCorporationII.MicrosoftFamily';
+	'Microsoft.WindowsFeedbackHub';
+	'Microsoft.GetHelp';
+	'Microsoft.Getstarted';
+	'microsoft.windowscommunicationsapps';
+	'Microsoft.WindowsMaps';
+	'Microsoft.BingNews';
+	'Microsoft.WindowsNotepad';
+	'Microsoft.OutlookForWindows';
+	'Microsoft.MSPaint';
+	'Microsoft.People';
+	'Microsoft.PowerAutomateDesktop';
+	'MicrosoftCorporationII.QuickAssist';
+	'Microsoft.SkypeApp';
+	'Microsoft.MicrosoftSolitaireCollection';
+	'Microsoft.Todos';
+	'Microsoft.WindowsSoundRecorder';
+	'Microsoft.BingWeather';
+	'Microsoft.Xbox.TCUI';
+	'Microsoft.XboxApp';
+	'Microsoft.XboxGameOverlay';
+	'Microsoft.XboxGamingOverlay';
+	'Microsoft.XboxIdentityProvider';
+	'Microsoft.XboxSpeechToTextOverlay';
+	'Microsoft.GamingApp';
+	'Microsoft.YourPhone';
+	'Microsoft.ZuneMusic';
+	'Microsoft.ZuneVideo';
+);
+$getCommand = { Get-AppxProvisionedPackage -Online; };
+$filterCommand = { $_.DisplayName -eq $selector; };
+$removeCommand = {
+  [CmdletBinding()]
+  param(
+    [Parameter( Mandatory, ValueFromPipeline )]
+    $InputObject
+  );
+  process {
+    $InputObject | Remove-AppxProvisionedPackage -AllUsers -Online -ErrorAction 'Continue';
+  }
+};
+$type = 'Package';
+$logfile = 'C:\Windows\Temp\remove-packages.log';
+&amp; {
+	$installed = &amp; $getCommand;
+	foreach( $selector in $selectors ) {
+		$result = [ordered] @{
+			Selector = $selector;
+		};
+		$found = $installed | Where-Object -FilterScript $filterCommand;
+		if( $found ) {
+			$result.Output = $found | &amp; $removeCommand;
+			if( $? ) {
+				$result.Message = "$type removed.";
+			} else {
+				$result.Message = "$type not removed.";
+				$result.Error = $Error[0];
+			}
+		} else {
+			$result.Message = "$type not installed.";
+		}
+		$result | ConvertTo-Json -Depth 3 -Compress;
+	}
+} *&gt;&amp;1 &gt;&gt; $logfile;
+		</File>
+		<File path="C:\Windows\Temp\remove-caps.ps1">
+$selectors = @(
+	'Browser.InternetExplorer';
+	'MathRecognizer';
+	'OpenSSH.Client';
+	'Microsoft.Windows.PowerShell.ISE';
+	'App.Support.QuickAssist';
+	'App.StepsRecorder';
+	'Media.WindowsMediaPlayer';
+	'Microsoft.Windows.WordPad';
+);
+$getCommand = { Get-WindowsCapability -Online; };
+$filterCommand = { ($_.Name -split '~')[0] -eq $selector; };
+$removeCommand = {
+  [CmdletBinding()]
+  param(
+    [Parameter( Mandatory, ValueFromPipeline )]
+    $InputObject
+  );
+  process {
+    $InputObject | Remove-WindowsCapability -Online -ErrorAction 'Continue';
+  }
+};
+$type = 'Capability';
+$logfile = 'C:\Windows\Temp\remove-caps.log';
+&amp; {
+	$installed = &amp; $getCommand;
+	foreach( $selector in $selectors ) {
+		$result = [ordered] @{
+			Selector = $selector;
+		};
+		$found = $installed | Where-Object -FilterScript $filterCommand;
+		if( $found ) {
+			$result.Output = $found | &amp; $removeCommand;
+			if( $? ) {
+				$result.Message = "$type removed.";
+			} else {
+				$result.Message = "$type not removed.";
+				$result.Error = $Error[0];
+			}
+		} else {
+			$result.Message = "$type not installed.";
+		}
+		$result | ConvertTo-Json -Depth 3 -Compress;
+	}
+} *&gt;&amp;1 &gt;&gt; $logfile;
+		</File>
+		<File path="C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml"><![CDATA[
+<LayoutModificationTemplate Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
+	<LayoutOptions StartTileGroupCellWidth="6" />
+	<DefaultLayoutOverride>
+		<StartLayoutCollection>
+			<StartLayout GroupCellWidth="6" xmlns="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" />
+		</StartLayoutCollection>
+	</DefaultLayoutOverride>
+</LayoutModificationTemplate>
+		]]></File>
+		<File path="%TEMP%\wifi.xml"><![CDATA[
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+	<name>mecssdhbhd</name>
+	<SSIDConfig>
+		<SSID>
+			<hex>6D656373736468626864</hex>
+			<name>mecssdhbhd</name>
+		</SSID>
+	</SSIDConfig>
+	<connectionType>ESS</connectionType>
+	<connectionMode>auto</connectionMode>
+	<MSM>
+		<security>
+			<authEncryption>
+				<authentication>WPA3SAE</authentication>
+				<encryption>AES</encryption>
+				<useOneX>false</useOneX>
+				<transitionMode xmlns="http://www.microsoft.com/networking/WLAN/profile/v4">true</transitionMode>
+			</authEncryption>
+			<sharedKey>
+				<keyType>passPhrase</keyType>
+				<protected>false</protected>
+				<keyMaterial>05305933</keyMaterial>
+			</sharedKey>
+		</security>
+	</MSM>
+</WLANProfile>
+		]]></File>
+		<File path="%TEMP%\disable-defender.ini">
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense
+    "Start" = REG_DWORD 4
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdBoot
+    "Start" = REG_DWORD 4
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter
+    "Start" = REG_DWORD 4
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisDrv
+    "Start" = REG_DWORD 4
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc
+    "Start" = REG_DWORD 4
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend
+    "Start" = REG_DWORD 4
+		</File>
+		<File path="C:\Windows\Setup\Scripts\unattend-01.ps1">
+# Turning off Windows Defender
+Write-Host "Disabling Windows Defender"
+Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -EnableControlledFolderAccess Disabled -EnableNetworkProtection AuditMode -Force -MAPSReporting Disabled -SubmitSamplesConsent NeverSend
+
+# Copying files over
+robocopy.exe 'D:\Unzipped' '$(Get-Location)\Unzipped' /e /z /j /mt:16 /nodcopy /nooffload /ndl
+
+# 1.3 ArcGIS 10.8
+# 1.3.1 Installation
+Write-Host "ArcGIS 10.8: Starting Installation"
+Start-Process '$(Get-Location)\Unzipped\ESRI ArcGIS Desktop 10.8\ESRI ArcGIS Desktop 10.8\ArcGIS_Desktop_108_172737.exe' "/S" -Wait
+Start-Process $env:USERPROFILE'\Documents\ArcGIS 10.8\Desktop\Setup.exe' "/passive /norestart" -Wait
+# 1.3.1 Moving crack files for 10.8
+Write-Host "ArcGIS 10.8: Copying crack files over"
+Copy-Item -Path '$(Get-Location)\Unzipped\ESRI ArcGIS Desktop 10.8\ESRI ArcGIS Desktop 10.8\Crack\AfCore.dll' '$(Get-Location)\Program Files (x86)\ArcGIS\Desktop10.8\bin'
+
+# 2. Agisoft
+# 2.1 Installation
+Write-Host "Agisoft: Starting Installation"
+Start-Process '$(Get-Location)\Unzipped\Agisoft Metashape Professional 1.8.4 Build 14493 (x64) Multilingual\metashape-pro_1_8_4_x64.msi' "/passive /norestart" -Wait
+# 2.2 Cracking
+Write-Host "Agisoft: Cracking"
+Start-Process '$(Get-Location)\Unzipped\Agisoft Metashape Professional 1.8.4 Build 14493 (x64) Multilingual\crack\Patch.exe' "/S" -Wait
+
+# 3. Global Mapper
+# 3.1 Installation
+Write-Host "Global Mapper: Starting Installation"
+Start-Process '$(Get-Location)\Unzipped\Global Mapper 22.1.0 Build 021721 incl patch [CrackingPatching]\global-mapper-22_1-x64.exe' "/S" -Wait
+# 3.2 Copying crack files
+Write-Host "Global Mapper: Copying crack files"
+Copy-Item -Path '$(Get-Location)\Unzipped\Global Mapper 22.1.0 Build 021721 incl patch `[CrackingPatching`]\patch\x64\global_mapper.exe' -Destination '$(Get-Location)\Program Files\GlobalMapper22.1_64bit\' -Force
+Copy-Item -Path '$(Get-Location)\Unzipped\Global Mapper 22.1.0 Build 021721 incl patch `[CrackingPatching`]\patch\x64\ProgramData\GlobalMapper\' -Destination '$(Get-Location)\ProgramData\' -Recurse
+
+# 4. Adobe Acrobat Pro
+# 4.1 Installation
+Write-Host "Adobe Acrobat Pro: Starting Installation"
+$mountResult = Mount-DiskImage '$(Get-Location)\Unzipped\Adobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso'
+$driveLetter = ($mountResult | Get-Volume).DriveLetter
+Start-Process "$($driveLetter):Adobe Acrobat Pro\setup.exe" "/sPB /rps" -Wait
+# 4.2 Cracking
+Write-Host "Adobe Acrobat Pro: Cracking"
+Start-Process "$($driveLetter):Adobe Acrobat Pro\crack.exe" "/S" -Wait
+# 4.3 Disabling Adobe's Auto Update Service
+Stop-Service 'AdobeARMservice'
+# 4.4 Dismounting ISO file
+Dismount-DiskImage '$(Get-Location)\Unzipped\Adobe.Acrobat.Pro.2023.u2.x64.Multilingual.iso'
+
+# 5 Nitro v14.5.0.11
+# 5.1 Installation
+Start-Process '$(Get-Location)\Unzipped\Nitro Pro 14.5.0.11 (x64) Enterprise + Crack\Setup\nitro_pro14_x64.msi' "/passive /norestart" -Wait
+# 5.2 Copying crack files
+Copy-Item -Path '$(Get-Location)\Unzipped\Nitro Pro 14.5.0.11 (x64) Enterprise + Crack\Crack\NitroPDF.exe' -Destination '$(Get-Location)\Program Files\Nitro\PDF Pro\14' -Force
+
+# 6 Envi 5.6
+# 6.1 Installation
+Start-Process '$(Get-Location)\Unzipped\Envi 5.6\envi56-win.exe' "/Silent" -Wait
+# 6.2 Moving crack files
+Copy-Item -Path '$(Get-Location)\Unzipped\Envi 5.6\Crack 5.6\x86bit\*' -Destination '$(Get-Location)\Program Files\Harris\ENVI56\IDL88\bin\bin.x86\' -Force
+Copy-Item -Path '$(Get-Location)\Unzipped\Envi 5.6\Crack 5.6\x64bit\*' -Destination '$(Get-Location)\Program Files\Harris\ENVI56\IDL88\bin\bin.x86_64\' -Force
+
+# Installing other programs via winget
+$listOfPrograms = "Bitdefender.Bitdefender", "Google.Chrome", "Mozilla.Firefox", "mcmilk.7zip-zstd", "RustDesk.RustDesk", "Google.EarthPro", "Zoom.Zoom", "Adobe.Acrobat.Reader.64-bit"
+foreach ($program in $listOfPrograms) { winget install -h -e --id $program }
+		</File>
+	</Extensions>
+</unattend>
