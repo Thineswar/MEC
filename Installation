@@ -5,7 +5,7 @@
 Write-Host "Running Installation script v2.0"
 
 #Determining drive letter with installation files
-Get-PSDrive D
+Get-PSDrive
 $DriveLetter = (Read-Host "Drive with installation files?").ToUpper()
 
 #Testing path before proceeding
