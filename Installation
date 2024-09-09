@@ -85,7 +85,7 @@ if ($version -eq $null) {
 } else {
     Write-Output "Current Winget version: $version"
     Write-Output "Updating App Installer..."
-    Start-Process "ms-windows-store://pdp/?productid=9NBLGGH42THS" -Wait
+    Start-Process "ms-windows-store://pdp/?productid=9NBLGGH4NNS1" -Wait
     Write-Output "App Installer update initiated."
 }
 
